@@ -1,5 +1,4 @@
 class Ship
-  class Pirate
 
      attr_reader :name, :type, :booty
 
@@ -24,4 +23,3 @@ class Ship
        self.all.clear
      end
   end
-end

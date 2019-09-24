@@ -1,1 +1,20 @@
-<h1>Make your form here</h1>
+<form method="post" action="/show">
+  <label class="name">Pirate's name, mate: </label>
+  <input class="name" id="name" type="text" name="pirate[name]">
+  <label class="weight">Weight: </label>
+  <input class="weight" id="weight" type="text" name="pirate[weight]">
+  <label class="height">Height: </label>
+  <input class="height" id="height" type="text" name="pirate[height]">
+  <p>Arrgh! Do you have any ship?</p>
+  <label class="shipname">No. 1 Ship's name: </label>
+  <input class="name" id="name" type="text" name="pirate[ships][][name]">
+  <label class="type">Its type: </label>
+  <input class="type" id="type" type="text" name="pirate[ships][][type]">
+  <label class="booty">Its booty: </label>
+  <input class="booty" id="booty" type="text" name="pirate[ships][][booty]">
+  <label class="shipname">No. 2 Ship's name: </label>
+  <input class="name" id="name" type="text" name="pirate[ships][][name]">
+  <label class="type">Its type: </label>
+  <input class="type" id="type" type="text" name="pirate[ships][][type]">
+  <label class="booty">Its booty: </label>
+  <input class="booty" id="booty" type="text" name="pirate[ships][][booty]">

@@ -1,10 +1,14 @@
-<%pirate = Pirate.new(params[:pirate]["name"], params[:pirate]["weight"], params[:pirate]["height"])%>
-
+<%pirate = Pirate.new(params[:pirate][:name], params[:pirate][:weight], params[:pirate][:height])%>
+<%params[:pirate][:ships].each do |ship|%>
+  <%Ship.new(ship[:name], ship[:type], ship[:booty])%>
+<%end%>
 <h1>Display your Pirate here</h1>
-<h3>Pirate's name: <%=%></h3>
-<h3>Pirate's weight: <%=%></h3>
-<h3>Pirate's height: <%=%></h3>
-<h2>Display your first ship here</h2>
+<h3>Pirate's name: <%=pirate.name%></h3>
+<h3>Pirate's weight: <%=pirate.weight%></h3>
+<h3>Pirate's height: <%=pirate.height%></h3>
 
-
-<h2>Display your second ship here</h2>
+<%Ship.all.each do |ship|%>
+  <h3>Ship's name: <%=ship.name%></h3>
+  <h3>Ship's type: <%=ship.type%></h3>
+  <h3>Ship's booty: <%=ship.booty%></h3>
+<%end%>
